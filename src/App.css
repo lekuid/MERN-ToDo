@@ -1,38 +1,136 @@
-.App {
+* {
+  margin: 0%;
+  padding: 0%;
+  cursor: default;
+}
+
+.Header {
+  display: flex;
+  margin: 40px 40px 20px 40px;
+  justify-content: space-around;
+}
+
+.Header .Title {
+  color: darkolivegreen;
+  grid-column: 2;
+}
+
+.Header .HeaderAddTask {
+  color: rgb(254, 255, 254);
+  background-color: darkolivegreen;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 20px;
+  margin: 0% 2%;
+  font-weight: bold;
+  grid-column: 3;
+}
+
+.Header .HeaderAddTask:hover {
+  background-color: rgb(63, 78, 38);
+}
+
+.Header .HeaderRefresh {
+  color: rgb(254, 255, 254);
+  background-color: darkolivegreen;
+  border: none;
+  border-radius: 5px;
+  padding: 0px 20px;
+  margin: 0% 2%;
+  font-weight: bold;
+  grid-column: 4;
+}
+
+.Header .HeaderRefresh:hover {
+  background-color: rgb(63, 78, 38);
+}
+
+.AddTask {
+  display: grid;
+  margin: 0% 20% 0% 20%;
+  padding: 0px 0px 10px 0px;
+}
+
+.AddTask input {
+  text-align: center;
+  padding: 5px 0px;
+  margin: 5px 0px;
+
+  border-width: 1px;
+  border-color: darkseagreen;
+  border-radius: 5px;
+}
+
+.AddTask input::placeholder {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.AddTask .AddTaskButton {
+  color: rgb(254, 255, 254);
+  background-color: darkolivegreen;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 0px;
+  font-weight: bold;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.AddTask .AddTaskButton:hover {
+  background-color: rgb(63, 78, 38);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.Tasks {
+  margin: 20px 100px;
 }
 
-.App-link {
-  color: #61dafb;
+.Tasks .TaskList {
+  list-style: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.task {
+  background-color: rgb(226, 255, 224);
+  display: grid;
+  grid-auto-columns: 75% 15% 10%;
+
+  margin: 10px 5%;
+  padding: 10px 0%;
+
+  border-radius: 10px;
+}
+
+.task:hover {
+  background-color: rgb(203, 236, 201);
+}
+
+.task .taskName {
+  color: darkolivegreen;
+  grid-column: 1;
+
+  margin: 0% 20px;
+}
+
+.task .taskDate {
+  color: darkolivegreen;
+  font-size: 14px;
+  grid-column: 2;
+}
+
+.task .deleteTask {
+  color: rgb(254, 255, 254);
+  background-color: rgb(123, 134, 103);
+  border: none;
+  border-radius: 5px;
+  padding: 0px 5px;
+  margin: 0px 20px 0px 10px;
+  font-weight: bold;
+  grid-column: 3;
+  opacity: 50%;
+}
+
+.task .deleteTask:hover {
+  color: rgb(255, 77, 77);
+}
+
+.task .deleteTask:active {
+  color: rgb(255, 77, 77);
+  background-color: rgb(63, 78, 38);
 }
